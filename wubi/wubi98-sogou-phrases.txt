@@ -6283,6 +6283,7 @@ pyeg,1=祖
 pyf,1=社
 pyfc,1=祛
 pyfg,1=社
+pyfh,1=祎
 pyfk,1=禧
 pyg,1=福
 pygd,1=祆
