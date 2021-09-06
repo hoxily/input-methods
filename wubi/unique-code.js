@@ -67,8 +67,20 @@ function removeCodeForCharacter(code, ch) {
 
 inversePhrases.forEach((codes, ch) => {
   if (codes.length > 1) {
-    // 只保留第一个编码
-    codes.sort();
+    // 保留较短的编码
+    codes.sort((x, y) => {
+      if (x.length != y.length) {
+        return x.length - y.length;
+      }
+
+      if (x < y) {
+        return -1;
+      }
+      if (x > y) {
+        return 1;
+      }
+      return 0;
+    });
     for (let i = 1; i < codes.length; i++) {
       let code = codes[i];
       removeCodeForCharacter(code, ch);
